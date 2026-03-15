@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #050a24;
+    padding-inline: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-back {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 10px;
+    top: 10px;
+    border-radius: 50%;
+    background-color: #eeeeee2e;
+}
+
+.btn-back img {
+    width: 25px;
+    height: 25px;
+}
+
+.btn-back:hover {
+    background-color: rgba(255, 255, 255, 0.241);
+}
+
+.block--1 {
+    position: absolute;
+    top: -150px;
+    right: -300px;
+    width: 600px;
+    height: 600px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.block--2 {
+    position: absolute;
+    top: 500px;
+    left: -300px;
+    width: 600px;
+    height: 600px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.block--1::before,
+.block--2::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    background: radial-gradient(circle,
+            rgba(45, 85, 251, 0.4) 0%,
+            rgba(45, 85, 251, 0.2) 40%,
+            rgba(45, 85, 251, 0.1) 70%,
+            transparent 100%);
+    filter: blur(120px);
+}
+
+.logo {
+    position: absolute;
+    top: 60px;
+    left: 100px;
+    width: 179px;
+    height: 54px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.login-card {
+    max-width: 540px;
+    width: 100%;
+    background: #ffffff;
+    padding: 48px 72px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.login-card h2 {
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 100%;
+    color: #101828;
+    margin-bottom: 32px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    margin-bottom: 12px;
+    color: #344054;
+}
+
+input {
+    width: 100%;
+    padding: 17px 16px;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #4d525c;
+    border: 1px solid #D0D5DD;
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid#b1d2f1;
+    box-shadow: 0 0 0 2px #a9cff3;
+}
+
+.password-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forgot {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+    color: #1570EF;
+    margin-bottom: 12px;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+
+.login-btn {
+    width: 100%;
+    height: 52px;
+    background: #1570ef;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FCFCFD;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #2055d1;
+}
+
+.signup {
+    text-align: center;
+    margin-top: 24px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #98A2B3;
+}
+
+.signup a {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-decoration: none;
+    color: #1570EF;
+}
+
+.password-input {
+    position: relative;
+}
+
+.password-input img {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.eye-open {
+    display: none;
+}
+
+input[type="password"]::-ms-reveal {
+    display: none;
+}
+
+@media screen and (max-width:483px) {
+    .btn-back {
+        width: 30px;
+        height: 30px;
+    }
+
+    .btn-back img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .logo {
+
+        top: 15%;
+        left: 30px;
+        width: 120px;
+        height: 40px;
+    }
+
+    .login-card {
+        max-width: 540px;
+        width: 100%;
+        background: #ffffff;
+        padding: 30px 35px;
+        border-radius: 20px;
+    }
+
+    .login-card h2 {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    .form-group {
+        margin-bottom: 16px;
+    }
+
+    label {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    input {
+        width: 100%;
+        padding: 11px 10px;
+        border-radius: 6px;
+        font-size: 10px;
+    }
+
+    input:focus {
+        border: 1px solid#b1d2f1;
+        box-shadow: 0 0 0 1px #b1d2f1;
+    }
+
+    .forgot {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .login-btn {
+        width: 100%;
+        height: 38px;
+        border-radius: 6px;
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .signup {
+        font-size: 12px;
+    }
+
+    .signup a {
+        font-size: 12px;
+    }
+
+
+    .password-input img {
+        width: 18px;
+        height: 18px;
+    }
+}

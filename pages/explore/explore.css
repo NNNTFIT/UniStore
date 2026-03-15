@@ -1,0 +1,95 @@
+:root{
+    --main-font: "Inter";
+    --main-background: #fcfdfe;
+    --main-color-title: #0f172a;
+    --main-color-text: #64748b;
+    --border-hr: #e2e8f0;
+    --primary: #1857ee;
+    --background-item: #ffffff;
+    --border-item: #e2e8f0;
+    --button-item: #eff6ff;
+}
+.filter{
+    padding: 40px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.filter-container{
+    width: 90%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.filter-title{
+    position: relative;
+    font-family: var(--main-font);
+    font-weight: 700;
+    color: var(--main-color-title);
+    font-size: 28px;
+}
+/* .filter-title::after{
+    position: absolute;
+    left: 0;
+    content: " ";
+    width: 3px;
+    height: 100%;
+    background-color: var(--primary);
+} */
+.filter-carousel{
+    width: 100%;
+    overflow-x: hidden;
+}
+.filter-carousel-container{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.filter-carousel-select{
+    cursor: pointer;
+    font-family: var(--main-font);
+    padding: 10px 24px;
+    background-color: white;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid var(--border-item);
+    border-radius: 100px;
+    color: var(--main-color-text);
+}
+.filter-carousel-select.filter-select-active{
+    color: white;
+    background-color: var(--primary);
+    border: 0;
+}
+.filter-carousel-select:not(.filter-select-active):hover{
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+.update{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 32px 0;
+}
+.update-container{
+    width: 90%;
+    max-width: 1280px;
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+}
+.trend{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 32px 0;
+}
+.trend-container{
+    width: 90%;
+    max-width: 1280px;
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="stylesheet" href="../detail/detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Content:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Content:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../share/css/header.css">
+    <link rel="stylesheet" href="../../share/css/style-footer.css">
+    <link rel="stylesheet" href="../popup/style-popup-accept.css">
+</head>
+
+<body>
+    <header></header>
+    <div class="app-card">
+        <div class="app-header">
+            <div class="app-info">
+                <div class="app-icon"><img src="../../img/detail/image 44.png" alt=""></div>
+                <div class="app-meta">
+                    <h2 class="app-title">Shizuku</h2>
+                    <h3>Xingchen & Rikka</h3>
+                    <div class="app-item">
+                        <img src="../../img/detail/check.svg" alt="">
+                        <p>Ứng dụng đã được kiểm duyệt</p>
+                    </div>
+                </div>
+            </div>
+            <button class="app-download-btn" id="btn-download">Tải về APK (2.5 MB)<img
+                    src="../../img/detail/material-symbols_download.svg" alt=""></button>
+        </div>
+        <div class="app-rating">
+            <div class="rating-score"><img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                <p>4.0</p>
+            </div>
+            <p>25 Đánh giá</p>
+        </div>
+    </div>
+    <div class="introduce">
+        <h2>Giới thiệu về Shizuku</h2>
+        <h3>Shizuku là một ứng dụng mã nguồn mở để phục vụ nhiều ứng dụng yêu cầu root / adb.</h3>
+        <div class="introduce-link">
+            <p>Hướng dẫn sử dụng: https://shizuku.rikka.app/guide/setup.html</p>
+            <p>Mã nguồn và hướng dẫn dành cho nhà phát triển: https://github.com/RikkaApps/Shizuku</p>
+        </div>
+    </div>
+    <div class="demo">
+        <h3>Ảnh minh hoạ</h3>
+        <div class="demo-list">
+            <div class="demo-card">
+                <img src="../../img/detail/Card (2).png" alt="">
+            </div>
+            <div class="demo-card">
+                <img src="../../img/detail/image 50.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="rating">
+        <h2 class="rating-title">Xếp hạng và đánh giá</h2>
+        <div class="rating-summary">
+            <div class="rating-score">
+                <h3 class="rating-number">5.0</h3>
+                <p class="rating-total">1N XẾP HẠNG</p>
+            </div>
+
+            <div class="rating-breakdown">
+                <div class="rating-bar">
+                    <span class="rating-star-count">5</span>
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                    <div class="rating-progress"></div>
+                </div>
+
+                <div class="rating-bar">
+                    <span class="rating-star-count">4</span>
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                    <div class="rating-progress"></div>
+                </div>
+
+                <div class="rating-bar">
+                    <span class="rating-star-count">3</span>
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                    <div class="rating-progress"></div>
+                </div>
+
+                <div class="rating-bar">
+                    <span class="rating-star-count">2</span>
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                    <div class="rating-progress"></div>
+                </div>
+
+                <div class="rating-bar">
+                    <span class="rating-star-count">1</span>
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                    <div class="rating-progress"></div>
+                </div>
+            </div>
+        </div>
+        <div class="rating-input">
+
+            <h3 class="review-title">Viết đánh giá của bạn</h3>
+
+            <div class="review-box">
+
+                <div class="star-select" id="star-select">
+                    <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="1">
+                    <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="2">
+                    <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="3">
+                    <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="4">
+                    <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="5">
+                </div>
+
+                <textarea id="comment-input" placeholder="Chia sẻ trải nghiệm của bạn..."></textarea>
+
+                <button id="submit-comment">
+                    Gửi đánh giá
+                </button>
+
+            </div>
+
+        </div>
+        <div class="rating-list">
+            <div class="rating-card">
+                <h5 class="rating-card-title">Game hay, đáng trải nghiệm</h5>
+
+                <div class="rating-card-stars">
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                </div>
+                <div class="rating-card-info">
+                    <img src="../../img/detail/Frame 120 (1).png" alt="">
+                    <p>07/04/2023</p>
+                </div>
+            </div>
+            <div class="rating-card">
+                <h5 class="rating-card-title">Game hay, đáng trải nghiệm</h5>
+
+                <div class="rating-card-stars">
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                </div>
+
+                <div class="rating-card-info">
+                    <img src="../../img/detail/Frame 120 (1).png" alt="">
+                    <p>07/04/2023</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-accept" id="popup-accept">
+        <div class="popup-accept-container">
+            <img class="popup-accept-img" src="../../img/detail/popup-note.svg" alt="">
+            <div class="popup-accept-content">
+                <p class="popup-accept-content-tittle">Bạn chắc chắn muốn tải xuống?</p>
+            </div>
+            <div class="popup-accept-button">
+                <button class="popup-accept-button-no" id="btn-download-no">Không</button>
+                <a class="popup-accept-button-yes"
+                    href="https://jeugjcwiplkysgmwdysd.supabase.co/storage/v1/object/public/fileAPK/file.apk"
+                    download="file.apk" id="btn-download-yes">Có</a>
+            </div>
+        </div>
+    </div>
+    <div class="popup-loadding" id="popup-loading">
+        <div class="popup-loadding-container">
+            <img src="../../img/detail/loading.svg" alt="" class="popup-loadding-img">
+            <div class="popup-loadding-tittle">Đang tải xuống</div>
+        </div>
+    </div>
+    <footer></footer>
+    <script>
+        const stars = document.querySelectorAll(".star");
+        const btn = document.getElementById("submit-comment");
+        const commentInput = document.getElementById("comment-input");
+        const ratingList = document.querySelector(".rating-list");
+
+        let selectedRating = 0;
+
+        stars.forEach((star, index) => {
+
+            star.addEventListener("mouseover", () => {
+
+                stars.forEach((s, i) => {
+                    s.classList.toggle("hover", i <= index);
+                });
+
+            });
+
+            star.addEventListener("mouseout", () => {
+
+                stars.forEach(s => s.classList.remove("hover"));
+
+            });
+
+            star.addEventListener("click", () => {
+
+                selectedRating = index + 1;
+
+                stars.forEach((s, i) => {
+
+                    if (i < selectedRating) {
+                        s.classList.add("active");
+                    } else {
+                        s.classList.remove("active");
+                    }
+
+                });
+
+            });
+
+        });
+
+        btn.addEventListener("click", () => {
+
+            if (commentInput.value.trim() === "" || selectedRating === 0) {
+                alert("Vui lòng nhập bình luận và chọn số sao");
+                return;
+            }
+
+            const card = document.createElement("div");
+            card.className = "rating-card";
+
+            let starsHTML = "";
+
+            for (let i = 0; i < selectedRating; i++) {
+                starsHTML += `<img src="../../img/detail/material-symbols-light_star.svg">`;
+            }
+
+            const today = new Date().toLocaleDateString("vi-VN");
+
+            card.innerHTML = `
+        <h5 class="rating-card-title">${commentInput.value}</h5>
+
+        <div class="rating-card-stars">
+            ${starsHTML}
+        </div>
+
+        <div class="rating-card-info">
+            <img src="../../img/detail/Frame 120 (1).png">
+            <p>${today}</p>
+        </div>
+    `;
+
+            ratingList.prepend(card);
+
+            commentInput.value = "";
+            selectedRating = 0;
+
+            stars.forEach(s => s.classList.remove("active"));
+
+        });
+    </script>
+</body>
+<script src="../popup/download.js"></script>
+<script src="../../share/js/header.js"></script>
+<script src="../../share/js/footer.js"></script>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../popup/style-popup-accept.css">
+</head>
+<body>
+    <button id="btn-download">hello</button>
+    <div class="popup-accept" id="popup-accept">
+        <div class="popup-accept-container">
+            <img class="popup-accept-img" src="../../img/detail/popup-note.svg" alt="">
+            <div class="popup-accept-content">
+                <p class="popup-accept-content-tittle">Bạn chắc chắn muốn tải xuống?</p>
+            </div>
+            <div class="popup-accept-button">
+                <button class="popup-accept-button-no" id="btn-download-no">Không</button>
+                <a class="popup-accept-button-yes" href="https://jeugjcwiplkysgmwdysd.supabase.co/storage/v1/object/public/fileAPK/file.apk" download="file.apk" id="btn-download-yes">Có</a>
+            </div>
+        </div>
+    </div>
+    <div class="popup-loadding" id="popup-loading">
+        <div class="popup-loadding-container">
+            <img src="../../img/detail/loading.svg" alt="" class="popup-loadding-img">
+            <div class="popup-loadding-tittle">Đang tải xuống</div>
+        </div>
+    </div>
+    <script src="../popup/download.js"></script>
+</body>
+</html>
