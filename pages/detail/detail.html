@@ -8,23 +8,7 @@
     <link rel="stylesheet" href="../detail/detail.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Content:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Content:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../share/css/header.css">
     <link rel="stylesheet" href="../../share/css/style-footer.css">
     <link rel="stylesheet" href="../popup/style-popup-accept.css">
@@ -32,251 +16,178 @@
 
 <body>
     <header></header>
-    <div class="app-card">
-        <div class="app-header">
+    <div class="detail-container">
+        <section class="app-hero">
+            <img src="../../img/detail/image 44.png" class="app-logo" alt="Shizuku Logo">
             <div class="app-info">
-                <div class="app-icon"><img src="../../img/detail/image 44.png" alt=""></div>
-                <div class="app-meta">
-                    <h2 class="app-title">Shizuku</h2>
-                    <h3>Xingchen & Rikka</h3>
-                    <div class="app-item">
-                        <img src="../../img/detail/check.svg" alt="">
-                        <p>Ứng dụng đã được kiểm duyệt</p>
+                <h1>Shizuku</h1>
+                <a href="#" class="app-author">Xingchen & Rikka</a>
+                <div class="action-row">
+                    <button class="btn-download" id="btn-download">
+                        Tải APK (2.5 MB)
+                    </button>
+                </div>
+            </div>
+        </section>
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-value">
+                    4.0
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                </div>
+                <div>25 Đánh giá</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">2.5 MB</div>
+                <div>Dung lượng</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">100+</div>
+                <div>Lượt tải</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">APK</div>
+                <div>Ứng dụng</div>
+            </div>
+        </div>
+        <h2 class="section-title">Ảnh minh hoạ</h2>
+        <div class="screenshots">
+            <img src="../../img/detail/Card (2).png" class="screen-img" alt="Screenshot 1">
+            <img src="../../img/detail/image 50.png" class="screen-img" alt="Screenshot 2">
+        </div>
+        <div class="short-desc">
+            Shizuku là một ứng dụng mã nguồn mở cho phép các ứng dụng Android sử dụng quyền hệ thống
+            thông qua ADB mà không cần root thiết bị.
+            <br><br>
+            Hướng dẫn sử dụng:
+            <a href="https://shizuku.rikka.app/guide/setup.html" target="_blank">
+                https://shizuku.rikka.app/guide/setup.html
+            </a>
+            <br><br>
+            Mã nguồn:
+            <a href="https://github.com/RikkaApps/Shizuku" target="_blank">https://github.com/RikkaApps/Shizuku</a>
+        </div>
+        <section class="review-section">
+            <h2 class="section-title">Đánh giá & Nhận xét</h2>
+            <div class="rating-overview">
+                <div class="rating-score">
+                    <h2 class="rating-score-letter">4.0</h2>
+                    <div class="rating-stars">
+                        <img src="../../img/detail/material-symbols-light_star.svg">
+                        <img src="../../img/detail/material-symbols-light_star.svg">
+                        <img src="../../img/detail/material-symbols-light_star.svg">
+                        <img src="../../img/detail/material-symbols-light_star.svg">
+                        <img src="../../img/detail/material-symbols-light_star.svg">
+                    </div>
+                    <p class="rating-score-p">Dựa trên 12 đánh giá</p>
+                </div>
+            </div>
+            <div class="comment-box">
+                <div class="comment-header">
+                    <div class="user-avatar">
+                        <img src="../../img/detail/Frame 120 (1).png" alt="">
+                    </div>
+                    <div class="comment-stars">
+                        <img src="../../img/detail/material-symbols-light_star.svg">
+                        <img src="../../img/detail/material-symbols-light_star.svg">
+                        <img src="../../img/detail/material-symbols-light_star.svg">
+                        <img src="../../img/detail/material-symbols-light_star.svg">
+                        <img src="../../img/detail/material-symbols-light_star.svg">
+                        <span class="rating-text">Đánh giá sao</span>
                     </div>
                 </div>
-            </div>
-            <button class="app-download-btn" id="btn-download">Tải về APK (2.5 MB)<img
-                    src="../../img/detail/material-symbols_download.svg" alt=""></button>
-        </div>
-        <div class="app-rating">
-            <div class="rating-score"><img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                <p>4.0</p>
-            </div>
-            <p>25 Đánh giá</p>
-        </div>
-    </div>
-    <div class="introduce">
-        <h2>Giới thiệu về Shizuku</h2>
-        <h3>Shizuku là một ứng dụng mã nguồn mở để phục vụ nhiều ứng dụng yêu cầu root / adb.</h3>
-        <div class="introduce-link">
-            <p>Hướng dẫn sử dụng: https://shizuku.rikka.app/guide/setup.html</p>
-            <p>Mã nguồn và hướng dẫn dành cho nhà phát triển: https://github.com/RikkaApps/Shizuku</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h3>Ảnh minh hoạ</h3>
-        <div class="demo-list">
-            <div class="demo-card">
-                <img src="../../img/detail/Card (2).png" alt="">
-            </div>
-            <div class="demo-card">
-                <img src="../../img/detail/image 50.png" alt="">
-            </div>
-        </div>
-    </div>
-    <div class="rating">
-        <h2 class="rating-title">Xếp hạng và đánh giá</h2>
-        <div class="rating-summary">
-            <div class="rating-score">
-                <h3 class="rating-number">5.0</h3>
-                <p class="rating-total">1N XẾP HẠNG</p>
-            </div>
-
-            <div class="rating-breakdown">
-                <div class="rating-bar">
-                    <span class="rating-star-count">5</span>
-                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                    <div class="rating-progress"></div>
+                <div class="comment-input-wrapper">
+                    <textarea class="comment-input" placeholder="Viết đánh giá của bạn về mã nguồn này..."></textarea>
+                    <button class="btn-submit">Đăng bài</button>
                 </div>
-
-                <div class="rating-bar">
-                    <span class="rating-star-count">4</span>
-                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                    <div class="rating-progress"></div>
-                </div>
-
-                <div class="rating-bar">
-                    <span class="rating-star-count">3</span>
-                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                    <div class="rating-progress"></div>
-                </div>
-
-                <div class="rating-bar">
-                    <span class="rating-star-count">2</span>
-                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                    <div class="rating-progress"></div>
-                </div>
-
-                <div class="rating-bar">
-                    <span class="rating-star-count">1</span>
-                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                    <div class="rating-progress"></div>
-                </div>
+                <div class="comment-list" id="comment-list"></div>
             </div>
-        </div>
-        <div class="rating-input">
-
-            <h3 class="review-title">Viết đánh giá của bạn</h3>
-
-            <div class="review-box">
-
-                <div class="star-select" id="star-select">
-                    <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="1">
-                    <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="2">
-                    <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="3">
-                    <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="4">
-                    <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="5">
-                </div>
-
-                <textarea id="comment-input" placeholder="Chia sẻ trải nghiệm của bạn..."></textarea>
-
-                <button id="submit-comment">
-                    Gửi đánh giá
-                </button>
-
-            </div>
-
-        </div>
-        <div class="rating-list">
-            <div class="rating-card">
-                <h5 class="rating-card-title">Game hay, đáng trải nghiệm</h5>
-
-                <div class="rating-card-stars">
-                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                </div>
-                <div class="rating-card-info">
-                    <img src="../../img/detail/Frame 120 (1).png" alt="">
-                    <p>07/04/2023</p>
-                </div>
-            </div>
-            <div class="rating-card">
-                <h5 class="rating-card-title">Game hay, đáng trải nghiệm</h5>
-
-                <div class="rating-card-stars">
-                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                </div>
-
-                <div class="rating-card-info">
-                    <img src="../../img/detail/Frame 120 (1).png" alt="">
-                    <p>07/04/2023</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="popup-accept" id="popup-accept">
-        <div class="popup-accept-container">
-            <img class="popup-accept-img" src="../../img/detail/popup-note.svg" alt="">
-            <div class="popup-accept-content">
-                <p class="popup-accept-content-tittle">Bạn chắc chắn muốn tải xuống?</p>
-            </div>
-            <div class="popup-accept-button">
-                <button class="popup-accept-button-no" id="btn-download-no">Không</button>
-                <a class="popup-accept-button-yes"
-                    href="https://jeugjcwiplkysgmwdysd.supabase.co/storage/v1/object/public/fileAPK/file.apk"
-                    download="file.apk" id="btn-download-yes">Có</a>
-            </div>
-        </div>
-    </div>
-    <div class="popup-loadding" id="popup-loading">
-        <div class="popup-loadding-container">
-            <img src="../../img/detail/loading.svg" alt="" class="popup-loadding-img">
-            <div class="popup-loadding-tittle">Đang tải xuống</div>
-        </div>
+        </section>
     </div>
     <footer></footer>
-    <script>
-        const stars = document.querySelectorAll(".star");
-        const btn = document.getElementById("submit-comment");
-        const commentInput = document.getElementById("comment-input");
-        const ratingList = document.querySelector(".rating-list");
-
+    <script src="../popup/download.js"></script>
+    <script src="../../share/js/header.js"></script>
+    <script src="../../share/js/footer.js"></script>
+    <script> const stars = document.querySelectorAll(".comment-stars img");
+        const ratingText = document.querySelector(".rating-text");
+        const commentInput = document.querySelector(".comment-input");
+        const btnSubmit = document.querySelector(".btn-submit");
+        const commentList = document.getElementById("comment-list");
         let selectedRating = 0;
-
+        const texts = ["Tệ quá",
+            "Chưa tốt lắm",
+            "Bình thường",
+            "Rất tốt", "Tuyệt vời!"];
         stars.forEach((star, index) => {
-
-            star.addEventListener("mouseover", () => {
-
-                stars.forEach((s, i) => {
-                    s.classList.toggle("hover", i <= index);
-                });
-
-            });
-
-            star.addEventListener("mouseout", () => {
-
-                stars.forEach(s => s.classList.remove("hover"));
-
-            });
-
             star.addEventListener("click", () => {
-
+                stars.forEach(s => s.classList.remove("active"));
+                for (let i = 0; i <= index; i++) {
+                    stars[i].classList.add("active");
+                }
                 selectedRating = index + 1;
-
-                stars.forEach((s, i) => {
-
-                    if (i < selectedRating) {
-                        s.classList.add("active");
-                    } else {
-                        s.classList.remove("active");
-                    }
-
-                });
-
+                ratingText.textContent = texts[index];
+                ratingText.style.color = "#2563eb";
+                ratingText.style.background = "#f1f5f9";
             });
-
         });
-
-        btn.addEventListener("click", () => {
-
-            if (commentInput.value.trim() === "" || selectedRating === 0) {
-                alert("Vui lòng nhập bình luận và chọn số sao");
-                return;
-            }
-
-            const card = document.createElement("div");
-            card.className = "rating-card";
-
+        btnSubmit.addEventListener("click", () => {
+            const comment = commentInput.value.trim();
+            if (selectedRating === 0) { alert("Vui lòng chọn số sao!"); return; }
+            if (comment === "") { alert("Vui lòng nhập bình luận!"); return; }
             let starsHTML = "";
+            for (let i = 0; i < selectedRating; i++) { starsHTML += `<img src="../../img/detail/material-symbols-light_star.svg">`; }
+            const newComment = document.createElement("div");
+            newComment.className = "review-item";
+            newComment.innerHTML = ` <div class="review-avatar"> 
+                <img src="../../img/detail/Frame 120 (1).png"> 
+                </div> <div class="review-body"> 
+                <div class="review-header"> 
+                <div class="review-user-info"> 
+                <span class="review-name">Người dùng</span> 
+                <div class="review-stars">
+                 ${starsHTML}
+                  </div> 
+                  </div>
+                  <span class="review-time">Vừa xong</span> 
+                  </div> <p class="review-text">${comment}</p> 
+                  <div class="review-actions"> 
+                  <img src="../../img/detail/list-unordered.svg">
+                   <img src="../../img/detail/chat-3-line.svg" class="reply-btn"> 
+                   <img src="../../img/detail/share-forward-line.svg">
+                    </div> <div class="reply-container"> 
+                    <div class="reply-list"></div> <div class="reply-box"></div> 
+                    </div> </div> `; commentList.prepend(newComment);
 
-            for (let i = 0; i < selectedRating; i++) {
-                starsHTML += `<img src="../../img/detail/material-symbols-light_star.svg">`;
-            }
-
-            const today = new Date().toLocaleDateString("vi-VN");
-
-            card.innerHTML = `
-        <h5 class="rating-card-title">${commentInput.value}</h5>
-
-        <div class="rating-card-stars">
-            ${starsHTML}
-        </div>
-
-        <div class="rating-card-info">
-            <img src="../../img/detail/Frame 120 (1).png">
-            <p>${today}</p>
-        </div>
-    `;
-
-            ratingList.prepend(card);
-
-            commentInput.value = "";
-            selectedRating = 0;
-
+            const replyBtn = newComment.querySelector(".reply-btn");
+            const replyBox = newComment.querySelector(".reply-box");
+            const replyList = newComment.querySelector(".reply-list");
+            replyBtn.addEventListener("click", () => {
+                if (replyBox.innerHTML !== "") return;
+                replyBox.innerHTML = ` <input type="text" class="reply-input" placeholder="Viết phản hồi..."> <button class="reply-submit">Gửi</button> `;
+                const replyInput = replyBox.querySelector(".reply-input");
+                const replySubmit = replyBox.querySelector(".reply-submit");
+                replySubmit.addEventListener("click", () => {
+                    const replyText = replyInput.value.trim();
+                    if (replyText === "") return;
+                    const reply = document.createElement("div");
+                    reply.className = "reply-item";
+                    reply.innerHTML = ` <div class="reply-avatar"> 
+                        <img src="../../img/detail/Frame 120 (1).png"> 
+                        </div> <div class="reply-body"> <div class="reply-header"> 
+                        <span class="reply-name">Người dùng</span> 
+                        <span class="reply-time">Vừa xong</span>
+                         </div> <div class="reply-text">
+                          ${replyText} </div>
+                           </div> `;
+                    replyList.appendChild(reply);
+                    replyInput.value = "";
+                });
+            });
+            commentInput.value = ""; selectedRating = 0;
             stars.forEach(s => s.classList.remove("active"));
-
-        });
+            ratingText.textContent = "Đánh giá sao";
+        }); 
     </script>
-</body>
-<script src="../popup/download.js"></script>
-<script src="../../share/js/header.js"></script>
-<script src="../../share/js/footer.js"></script>
 
 </html>
+```
