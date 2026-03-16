@@ -63,6 +63,7 @@
     margin-bottom: 16px;
 }
 .carousel-item-btn{
+    cursor: pointer;
     display: block;
     width: 100%;
     padding: 8px;

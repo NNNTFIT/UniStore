@@ -60,6 +60,14 @@ header{
 .header-nav a:hover{
     color: var(--primary);
 }
+.header-nav-btn{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header-nav-btn a{
+    text-decoration: none;
+}
 .header-nav-upload{
     padding: 8px 16px;
     background-color: var(--primary);
