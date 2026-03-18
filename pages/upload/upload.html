@@ -12,45 +12,98 @@
 
 <body>
     <header></header>
-    <section class="upload">
-        <div class="upload-container">
-            <div class="upload-file">
-                <div class="upload-file-tittle">Tải lên APK</div>
-                <div class="upload-file-main">
-                    <div class="upload-file-main-ico"></div>
-                    <div class="upload-file-main-text">Chọn tệp hoặc kéo thả vào đây</div>
-                </div>
-            </div>
-            <div class="upload-detail">
-                <div class="upload-detail-top">
-                    <form>
-                        <label for="nameAPK">Tên APK</label>
-                        <input id="nameAPK" type="text" placeholder="Nhập tên APK">
-                    </form>
-                    <form>
-                        <label for="nameUser">Nhà phát hành</label>
-                        <input id="nameUser" type="text" placeholder="Nhập tên nhà phát hành">
-                    </form>
-                </div>
-                <div class="upload-detail-bottom">
-                    <form>
-                        <label for="description">Mô tả APK</label>
-                        <textarea id="description" placeholder="Mô tả thông tin của APK"></textarea>
-                    </form>
-                </div>
-
-            </div>
-            <div class="upload-button">
-                <button type="button" class="upload-btn-none">Hủy</button>
-                <button type="button" class="upload-btn-save">Lưu APK</button>
-            </div>
+    <div class="upload-container">
+        <div class="header-section">
+            <h1>Tải dự án lên</h1>
+            <p>Chia sẻ thành quả của bạn với cộng đồng sinh viên IUH</p>
         </div>
-    </section>
+        <div class="upload-card">
+            <form id="uploadForm">
+                <div class="form-group">
+                    <label class="form-label">Logo ứng dụng</label>
+                    <div class="logo-upload-wrapper">
+                        <input type="file" id="logoInput" accept="image/*" hidden>
+                        <div class="logo-preview-box" onclick="">
+                            <span class="plus-icon" id="plusIcon">+</span>
+                            <img id="logoPreview" src="" alt="Preview">
+                        </div>
+                        <div class="img-text" style="">
+                            Khuyên dùng ảnh <strong>.png</strong> hoặc <strong>.jpg</strong><br>
+                            Tỷ lệ 1:1 (vuông) để hiển thị đẹp nhất.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="appName">Tên ứng dụng / Đồ án</label>
+                    <input type="text" id="appName" class="form-input"
+                        placeholder="Ví dụ: Website bán hàng, Bot Discord..." required>
+                </div>
+                <div class="form-group">
+                    <p class="form-group-text">Danh mục</p>
+                    <div class="custom-select" id="categorySelect">
+                        <div class="select-selected">Lập trình Web</div>
+                        <img class="select-icon" src="../../img/all/arrow-down-s-line.svg" alt="">
+                        <ul class="select-options">
+                            <li data-value="web">Lập trình Web</li>
+                            <li data-value="mobile">Ứng dụng Mobile</li>
+                            <li data-value="game">Trò chơi</li>
+                            <li data-value="tool">Công cụ & Tiện ích</li>
+                        </ul>
+                    </div>
+                    <input type="hidden" id="category" value="web">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Ảnh minh hoạ dự án</label>
+                    <input type="file" id="previewInput" accept="image/*" hidden>
+                    <div class="preview-upload-box" id="previewBox">
+                        <span class="preview-text">+ Thêm ảnh minh hoạ</span>
+                        <img id="previewImage" src="" alt="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="description">Mô tả dự án</label>
+                    <textarea id="description" class="form-textarea"
+                        placeholder="Viết một chút về tính năng và công nghệ bạn sử dụng..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Tệp tin dự án (.zip, .rar)</label>
+                    <input type="file" id="fileInput" accept=".zip,.rar,.7z" hidden>
+                    <div class="drop-zone" id="dropZone" onclick="">
+                        <span class="drop-zone-icon"><img src="../../img/upload/ico-upload.svg" alt=""></span>
+                        <p class="drop-zone-text">Kéo thả file vào đây hoặc <span>Duyệt file</span></p>
+                        <div id="fileNameDisplay" class="file-info"></div>
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit">Đăng dự án ngay</button>
+            </form>
+        </div>
+    </div>
     <footer></footer>
 
     <script src="../../share/js/header-search-mobile.js"></script>
     <script src="../../share/js/header.js"></script>
     <script src="../../share/js/footer.js"></script>
+    <script>
+        const select = document.getElementById("categorySelect");
+        const selected = select.querySelector(".select-selected");
+        const options = select.querySelectorAll(".select-options li");
+        const hiddenInput = document.getElementById("category");
+        selected.onclick = () => {
+            select.classList.toggle("active");
+        };
+        options.forEach(option => {
+            option.onclick = () => {
+                selected.textContent = option.textContent;
+                hiddenInput.value = option.dataset.value;
+                select.classList.remove("active");
+            };
+        });
+        document.onclick = (e) => {
+            if (!select.contains(e.target)) {
+                select.classList.remove("active");
+            }
+        };
+    </script>
 </body>
 
 </html>
