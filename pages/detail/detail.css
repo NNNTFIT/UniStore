@@ -356,7 +356,7 @@ transform:scale(1.02);
 }
 
 .reply-list {
-    margin-left: 45px;
+    margin-left: 25px;
 }
 
 .reply-item {
@@ -400,7 +400,7 @@ transform:scale(1.02);
 .reply-box {
     display: flex;
     gap: 10px;
-    margin-left: 45px;
+    margin-left: 25px;
     margin-top: 10px;
 }
 
