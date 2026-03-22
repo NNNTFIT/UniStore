@@ -4,7 +4,17 @@
     box-sizing:border-box;
     font-family:'Inter',sans-serif;
 }
-
+:root{
+    --main-font: "Inter";
+    --main-background: #fcfdfe;
+    --main-color-title: #0f172a;
+    --main-color-text: #64748b;
+    --border-hr: #e2e8f0;
+    --primary: #1857ee;
+    --background-item: #ffffff;
+    --border-item: #e2e8f0;
+    --button-item: #eff6ff;
+}
 body{
     background:#fafbfc;
     color:#111827;
@@ -106,7 +116,7 @@ body{
     color:#6b7280;
 }
 .section-title{
-    font-size:30px;
+    font-size:24px;
     font-weight:700;
     margin-bottom:16px;
 }
@@ -131,13 +141,94 @@ body{
     scroll-snap-align:start;
 }
 .short-desc{
+    position: relative;
+    height: 150px;
+    overflow-y: hidden;
     font-size:15px;
     line-height:1.6;
     color:#4b5563;
     margin-bottom:40px;
+    padding-bottom: 30px;
 }
+.short-desc ul{
+    padding: 0px 20px;
+}
+.short-desc button{
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+    font-size: 15px;
+    font-family: var(--main-font);
+    color: var(--primary);
+    font-weight: 700;
+    border: 0;
+    background-color: transparent;
+}
+.section-detail-bottom{
+    width: 100%;
+    padding: 30px;
+    background-color: var(--background-item);
+    border-radius: 20px;
+}
+.section-detail-bottom-gird{
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2,1fr);
+}
+.section-detail-bottom-gird-item{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.section-detail-bottom-gird-item-ico{
+    width: 24px;
+    height: 24px;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    background-color: var(--main-color-text);
+}
+.section-detail-bottom-gird-item-content{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+.ico-user{
+    -webkit-mask-image: url(../../img/detail/ico-user.svg);
+    mask-image: url(../../img/detail/ico-user.svg);
+}
+.ico-celender{
+    -webkit-mask-image: url(../../img/detail/calendar.svg);
+    mask-image: url(../../img/detail/calendar.svg);
+}
+.ico-sheld{
+    -webkit-mask-image: url(../../img/detail/shield.svg);
+    mask-image: url(../../img/detail/shield.svg);
+}
+.ico-file{
+    -webkit-mask-image: url(../../img/detail/file_dicoration.svg);
+    mask-image: url(../../img/detail/file_dicoration.svg);
+}
+#shield-deltail{
+    color: green;
+}
+.section-detail-bottom-gird-item-content-title{
+    font-weight: 500;
+    font-family: var(--main-font);
+    font-size: 12px;
+    color: var(--main-color-text);
+}
+.section-detail-bottom-gird-item-content-text{
+    font-weight: 700;
+    font-family: var(--main-font);
+    font-size: 14px;
+    color: var(--main-color-title);
+}
+
 .review-section{
-    border-top:1px solid #e5e7eb;
     padding-top:40px;
 }
 .review-section h3{

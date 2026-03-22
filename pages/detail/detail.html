@@ -24,7 +24,7 @@
                 <a href="#" class="app-author">Xingchen & Rikka</a>
                 <div class="action-row">
                     <button class="btn-download" id="btn-download">
-                        Tải APK (2.5 MB)
+                        Tải Về
                     </button>
                 </div>
             </div>
@@ -55,18 +55,51 @@
             <img src="../../img/detail/Card (2).png" class="screen-img" alt="Screenshot 1">
             <img src="../../img/detail/image 50.png" class="screen-img" alt="Screenshot 2">
         </div>
-        <div class="short-desc">
-            Shizuku là một ứng dụng mã nguồn mở cho phép các ứng dụng Android sử dụng quyền hệ thống
-            thông qua ADB mà không cần root thiết bị.
+        <div class="short-desc" id="display-detail">
+            <h2 class="section-title">Mô tả ứng dụng</h2>
+            Shizuku là một ứng dụng tiện ích hệ thống cho phép các ứng dụng thông thường có thể sử dụng các API hệ thống được cấp quyền trực tiếp bởi ADB (Android Debug Bridge) hoặc Root. Nhờ đó, bạn có thể cấp quyền nâng cao cho các công cụ khác hoạt động mà không cần phải Root máy.
             <br><br>
-            Hướng dẫn sử dụng:
-            <a href="https://shizuku.rikka.app/guide/setup.html" target="_blank">
-                https://shizuku.rikka.app/guide/setup.html
-            </a>
-            <br><br>
-            Mã nguồn:
-            <a href="https://github.com/RikkaApps/Shizuku" target="_blank">https://github.com/RikkaApps/Shizuku</a>
+            <h3>Tính năng chính</h3>
+            <ul>
+                <li>Hoạt động cực kỳ nhẹ và tiêu tốn rất ít RAM.</li>
+                <li>Hỗ trợ khởi động dịch vụ qua Wireless Debugging (từ Android 11 trở lên).</li>
+                <li>Giúp các app như App Ops, Ice Box hoạt động mượt mà không cần cấp quyền rườm rà qua máy tính mỗi lần khởi động lại.</li>
+            </ul>
+            <button id="btn-more">Xem thêm</button>
+
         </div>
+        <section class="section-detail-bottom">
+            <div class="section-detail-bottom-gird">
+                <div class="section-detail-bottom-gird-item">
+                    <div class="section-detail-bottom-gird-item-ico ico-user"></div>
+                    <div class="section-detail-bottom-gird-item-content">
+                        <div class="section-detail-bottom-gird-item-content-title">Tác giả</div>
+                        <div class="section-detail-bottom-gird-item-content-text">Tên tác giả</div>
+                    </div>
+                </div>
+                <div class="section-detail-bottom-gird-item">
+                    <div class="section-detail-bottom-gird-item-ico ico-celender"></div>
+                    <div class="section-detail-bottom-gird-item-content">
+                        <div class="section-detail-bottom-gird-item-content-title">Ngày đăng tải</div>
+                        <div class="section-detail-bottom-gird-item-content-text">19 Tháng 03, 2026</div>
+                    </div>
+                </div>
+                <div class="section-detail-bottom-gird-item">
+                    <div class="section-detail-bottom-gird-item-ico ico-sheld"></div>
+                    <div class="section-detail-bottom-gird-item-content">
+                        <div class="section-detail-bottom-gird-item-content-title">Trạng thái kiểm duyệt</div>
+                        <div class="section-detail-bottom-gird-item-content-text" id="shield-deltail">Đã quét (An toàn)</div>
+                    </div>
+                </div>
+                <div class="section-detail-bottom-gird-item">
+                    <div class="section-detail-bottom-gird-item-ico ico-file"></div>
+                    <div class="section-detail-bottom-gird-item-content">
+                        <div class="section-detail-bottom-gird-item-content-title">Danh mục</div>
+                        <div class="section-detail-bottom-gird-item-content-text">Công cụ</div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="review-section">
             <h2 class="section-title">Đánh giá & Nhận xét</h2>
             <div class="rating-overview">
@@ -184,6 +217,15 @@
             stars.forEach(s => s.classList.remove("active"));
             ratingText.textContent = "Đánh giá sao";
         }); 
+
+
+
+        const displayDetail = document.getElementById("display-detail");
+        const btnMore = document.getElementById("btn-more");
+        btnMore.addEventListener("click", () =>{
+            btnMore.style.display = "none";
+            displayDetail.style.height = "fit-content";
+        });
     </script>
 
 </html>

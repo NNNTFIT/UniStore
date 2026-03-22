@@ -11,6 +11,7 @@ let authHTML = `        <div class="header-container">
                 <input type="text" placeholder="Tìm kiếm ứng dụng">
             </div>
             <div class="header-nav-btn">
+                <a href="../../pages/login/login.html" class="header-nav-login">Đăng nhập</a>
                 <a href="../../pages/upload/upload.html" class="header-nav-upload">Tải App lên</a>
             </div>
         </div>`
