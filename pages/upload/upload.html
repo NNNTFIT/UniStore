@@ -34,20 +34,19 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="appName">Tên ứng dụng / Đồ án</label>
+                    <label class="form-label" for="appName">Tên ứng dụng</label>
                     <input type="text" id="appName" class="form-input"
-                        placeholder="Ví dụ: Website bán hàng, Bot Discord..." required>
+                        placeholder="Nhập tên ứng dụng..." required>
                 </div>
                 <div class="form-group">
                     <p class="form-group-text">Danh mục</p>
                     <div class="custom-select" id="categorySelect">
-                        <div class="select-selected">Lập trình Web</div>
+                        <div class="select-selected">Công cụ</div>
                         <img class="select-icon" src="../../img/all/arrow-down-s-line.svg" alt="">
                         <ul class="select-options">
-                            <li data-value="web">Lập trình Web</li>
-                            <li data-value="mobile">Ứng dụng Mobile</li>
+                            <li data-value="tool">Công cụ</li>
+                            <li data-value="entertainment">Giải trí</li>
                             <li data-value="game">Trò chơi</li>
-                            <li data-value="tool">Công cụ & Tiện ích</li>
                         </ul>
                     </div>
                     <input type="hidden" id="category" value="web">
@@ -61,13 +60,13 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="description">Mô tả dự án</label>
+                    <label class="form-label" for="description">Mô tả ứng dụng</label>
                     <textarea id="description" class="form-textarea"
                         placeholder="Viết một chút về tính năng và công nghệ bạn sử dụng..."></textarea>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Tệp tin dự án (.zip, .rar)</label>
-                    <input type="file" id="fileInput" accept=".zip,.rar,.7z" hidden>
+                    <label class="form-label">Tệp tin (.apk)</label>
+                    <input type="file" id="fileInput" accept=".apk" hidden>
                     <div class="drop-zone" id="dropZone" onclick="">
                         <span class="drop-zone-icon"><img src="../../img/upload/ico-upload.svg" alt=""></span>
                         <p class="drop-zone-text">Kéo thả file vào đây hoặc <span>Duyệt file</span></p>
