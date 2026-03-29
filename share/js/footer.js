@@ -1,10 +1,10 @@
 const foot = `        <div class="footer-container">
             <div class="footer-top">
                 <div class="footer-top-left">
-                    <div class="logo">
+                    <a href="../../pages/home/index.html" class="logo">
                         <img src="../../share/img/logo.svg" alt="">
                         <p>UniStore</p>
-                    </div>
+                    </a>
                     <div class="footer-top-left-text">
                        Nền tảng chia sẻ đồ án và ứng dụng trực tuyến. Nơi kết nối và lan tỏa tri thức của sinh viên IT.
                     </div>

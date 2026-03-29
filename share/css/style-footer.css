@@ -83,6 +83,9 @@ footer{
     text-decoration: none;
     color: var(--main-color-text);
 }
+.footer-top-right-box-content a:hover{
+    color: var(--primary);
+}
 .footer-bottom{
     width: 100%;
     max-width: 1076px;
@@ -123,6 +126,9 @@ footer{
     text-align: center;
     color: var(--main-color-text);
     text-decoration: none;
+}
+.footer-bottom-content-right a:hover{
+    color: var(--primary);
 }
 
 @media(max-width: 767px){
