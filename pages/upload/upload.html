@@ -35,8 +35,7 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="appName">Tên ứng dụng</label>
-                    <input type="text" id="appName" class="form-input"
-                        placeholder="Nhập tên ứng dụng..." required>
+                    <input type="text" id="appName" class="form-input" placeholder="Nhập tên ứng dụng..." required>
                 </div>
                 <div class="form-group">
                     <p class="form-group-text">Danh mục</p>
@@ -102,6 +101,13 @@
                 select.classList.remove("active");
             }
         };
+        (function checkAuth() {
+            const loggedInUser = localStorage.getItem("user");
+            if (!loggedInUser) {
+                alert("Bạn cần đăng nhập để truy cập trang này!");
+                window.location.href = "../login/login.html";
+            }
+        })();
     </script>
 </body>
 
