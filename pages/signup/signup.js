@@ -1,8 +1,14 @@
 function handleRegister() {
+    const name = document.getElementById("signup-name").value.trim();
     const email = document.getElementById("signup-email").value.trim();
     const password = document.getElementById("signup-password").value;
-    if (!email || !password) {
+     const rePassword = document.getElementById("signup-repassword").value;
+    if (!email || !password || !name || !rePassword) {
         alert("Vui lòng nhập đầy đủ thông tin!");
+        return;
+    }
+    if (password !== rePassword) {
+        alert("Mật khẩu không khớp!");
         return;
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
