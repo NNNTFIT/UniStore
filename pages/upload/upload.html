@@ -52,10 +52,11 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Ảnh minh hoạ dự án</label>
-                    <input type="file" id="previewInput" accept="image/*" hidden>
+                    <input type="file" id="previewInput" accept="image/*" multiple hidden>
+
                     <div class="preview-upload-box" id="previewBox">
-                        <span class="preview-text">+ Thêm ảnh minh hoạ</span>
-                        <img id="previewImage" src="" alt="">
+                        <div class="preview-placeholder">+ Thêm ảnh minh hoạ</div>
+                        <div class="preview-list" id="previewList"></div>
                     </div>
                 </div>
                 <div class="form-group">
@@ -81,6 +82,7 @@
     <script src="../../share/js/header-search-mobile.js"></script>
     <script src="../../share/js/header.js"></script>
     <script src="../../share/js/footer.js"></script>
+    <script src="../upload/upload.js"></script>
     <script>
         const select = document.getElementById("categorySelect");
         const selected = select.querySelector(".select-selected");

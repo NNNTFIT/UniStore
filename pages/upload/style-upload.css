@@ -4,9 +4,8 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
-
 body {
-    background-color: #fafbfc;
+    background: #fafbfc;
     color: #111827;
 }
 .navbar {
@@ -22,14 +21,11 @@ body {
     margin: 40px auto;
     padding: 0 20px;
 }
-.drop-zone-icon img{
-     filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(2deg) brightness(0%) contrast(0%);
-}
+
 .header-section {
     text-align: center;
     margin-bottom: 30px;
 }
-
 .upload-card {
     background: #fff;
     padding: 30px;
@@ -59,13 +55,15 @@ body {
     padding: 12px;
     border-radius: 10px;
     border: 1px solid #cdcdcd;
-    background-color: #f8f8f8;
+    background: #f8f8f8;
     transition: 0.2s;
-    resize: none;
 }
-.form-textarea{
+
+.form-textarea {
+    resize: none;
     padding-bottom: 30px;
 }
+
 .img-text {
     font-size: 14px;
     color: #6b7280;
@@ -86,13 +84,13 @@ body {
     justify-content: center;
     cursor: pointer;
     overflow: hidden;
-    background-color: #f8f8f8;
+    background: #f8f8f8;
     transition: 0.2s;
 }
 
 .logo-preview-box:hover {
     border-color: #2563eb;
-    background-color: #eff6ff;
+    background: #eff6ff;
 }
 
 .logo-preview-box:active {
@@ -112,14 +110,14 @@ body {
 }
 .custom-select {
     position: relative;
-    width: 100%;
 }
 
 .select-selected {
-    padding: 12px 36px 12px 12px;
+    padding: 12px;
+    padding-right: 36px;
     border-radius: 10px;
     border: 1px solid #cdcdcd;
-    background-color: #f8f8f8;
+    background: #f8f8f8;
     cursor: pointer;
     font-size: 14px;
 }
@@ -135,14 +133,12 @@ body {
 .select-options {
     list-style: none;
     position: absolute;
-    width: 100%;
     top: 110%;
-    left: 0;
+    width: 100%;
     background: #fff;
     border: 1px solid #e5e7eb;
     border-radius: 10px;
     display: none;
-    overflow: hidden;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     z-index: 10;
 }
@@ -160,63 +156,36 @@ body {
 .custom-select.active .select-options {
     display: block;
 }
-.preview-upload-box {
-    width: 100%;
-    height: 180px;
-    border: 2px dashed #d1d5db;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    background: #f9fafb;
-    position: relative;
-    overflow: hidden;
-    transition: 0.25s;
-}
-
-.preview-upload-box:hover {
-    border-color: #2563eb;
-    background: #eff6ff;
-}
-
-.preview-upload-box:active {
-    transform: scale(0.98);
-}
-
-.preview-text {
-    color: #6b7280;
-    font-size: 14px;
-    font-weight: 500;
-    text-align: center;
-}
-
-.preview-upload-box img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: none;
-}
-
-.preview-upload-box.has-image .preview-text {
-    display: none;
-}
+.preview-upload-box,
 .drop-zone {
-    padding: 30px;
     border: 2px dashed #ccc;
     border-radius: 12px;
     text-align: center;
     cursor: pointer;
-    background-color: #f8f8f8;
+    background: #f8f8f8;
     transition: 0.25s;
 }
 
+.preview-upload-box {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.drop-zone {
+    padding: 30px;
+}
+
+.preview-upload-box:hover,
 .drop-zone:hover {
     border-color: #2563eb;
     background: #eff6ff;
 }
 
+.preview-upload-box:active,
 .drop-zone:active {
     transform: scale(0.98);
 }
@@ -226,16 +195,51 @@ body {
     background: #eff6ff;
 }
 
+.preview-text,
+.drop-zone-text {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+}
 .drop-zone-icon img {
     width: 40px;
     filter: brightness(0);
 }
-
-.drop-zone-text {
-    color: #5b5b5b;
-    font-size: 14px;
-    font-weight: 500;
+.preview-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
+
+.preview-item {
+    width: 130px;
+    height: 130px;
+    position: relative;
+}
+
+.preview-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.preview-remove {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: red;
+    font-size: 2px;
+    padding: 2px 6px;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .btn-submit {
     width: 100%;
     padding: 14px;
@@ -249,7 +253,7 @@ body {
 }
 
 .btn-submit:hover {
-    background-color: #1d4ed8;
+    background: #1d4ed8;
 }
 
 .btn-submit:active {
