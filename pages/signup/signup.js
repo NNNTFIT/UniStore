@@ -38,5 +38,5 @@ function handleRegister() {
         alert("Mật khẩu chưa hợp lệ:\n\n" + errors.join("\n"));
         return;
     }
-    register(email, password);
+    register(name, email, password);
 }

@@ -119,5 +119,40 @@
     <footer></footer>
     <script src="../../share/js/header.js"></script>    
     <script src="../../share/js/footer.js"></script>
+    <script>
+        function getDisplayAuthor(author) {
+            if (typeof author !== 'string') return author;
+            if (!author.includes('@')) return author;
+
+            const users = JSON.parse(localStorage.getItem("users") || "[]");
+            const user = users.find(u => u.email === author);
+            return user?.name || author;
+        }
+
+        function renderExploreProjects() {
+            const projects = JSON.parse(localStorage.getItem("projects") || "[]");
+            const updateContainer = document.querySelector(".update .carousel-container");
+            const trendContainer = document.querySelector(".trend .carousel-container");
+            
+            // Clear existing items
+            updateContainer.innerHTML = "";
+            trendContainer.innerHTML = "";
+            
+            projects.forEach(project => {
+                const item = document.createElement("a");
+                item.href = `../detail/detail.html?id=${project.id}`;
+                item.className = "carousel-item";
+                item.innerHTML = `
+                    <img src="${project.logo}" alt="" class="carousel-item-logo">
+                    <div class="carousel-item-title">${project.appName}</div>
+                    <div class="carousel-item-cre">${getDisplayAuthor(project.author)}</div>
+                    <button class="carousel-item-btn" type="button">Chi tiết</button>
+                `;
+                updateContainer.appendChild(item.cloneNode(true));
+                trendContainer.appendChild(item);
+            });
+        }
+        document.addEventListener("DOMContentLoaded", renderExploreProjects);
+    </script>
 </body>
 </html>

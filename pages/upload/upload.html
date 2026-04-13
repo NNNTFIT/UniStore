@@ -43,12 +43,12 @@
                         <div class="select-selected">Công cụ</div>
                         <img class="select-icon" src="../../img/all/arrow-down-s-line.svg" alt="">
                         <ul class="select-options">
-                            <li data-value="tool">Công cụ</li>
-                            <li data-value="entertainment">Giải trí</li>
-                            <li data-value="game">Trò chơi</li>
+                            <li>Công cụ</li>
+                            <li>Giải trí</li>
+                            <li>Trò chơi</li>
                         </ul>
                     </div>
-                    <input type="hidden" id="category" value="web">
+                    <input type="hidden" id="category" value="Công cụ">
                 </div>
                 <div class="form-group">
                     <label class="form-label">Ảnh minh hoạ dự án</label>
@@ -94,7 +94,7 @@
         options.forEach(option => {
             option.onclick = () => {
                 selected.textContent = option.textContent;
-                hiddenInput.value = option.dataset.value;
+                hiddenInput.value = option.textContent;
                 select.classList.remove("active");
             };
         });

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniStore - Tài khoản</title>
+    <link rel="stylesheet" href="../../share/css/main.css">
+    <link rel="stylesheet" href="../../share/css/header.css">
+    <link rel="stylesheet" href="../../share/css/style-footer.css">
+    <link rel="stylesheet" href="user.css">
+</head>
+
+<body>
+    <header></header>
+
+    <div class="user-container">
+        <div class="user-wrapper">
+            <aside class="user-sidebar">
+                <div class="user-card">
+                    <img id="userAvatar" src="" alt="Avatar" class="user-avatar-large">
+                    <h2 id="userName" class="user-name-large">Người dùng</h2>
+                    <p id="userEmail" class="user-email">email@example.com</p>
+                    <button class="btn-logout">Đăng xuất</button>
+                </div>
+
+                <nav class="user-nav">
+                    <a href="#" class="nav-link active" onclick="showTab(event, 'profile')">Thông tin tài khoản</a>
+                    <a href="#" class="nav-link" onclick="showTab(event, 'uploads')">Ứng dụng của tôi</a>
+                </nav>
+            </aside>
+
+            <main class="user-main">
+                <section id="profile-tab" class="tab-content active">
+                    <div class="tab-header">
+                        <h1>Thông tin tài khoản</h1>
+                    </div>
+
+                    <div class="profile-form">
+                        <div class="form-group">
+                            <label>Tên</label>
+                            <input type="text" id="profileName" class="form-input" placeholder="Nhập tên của bạn">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="profileEmail" class="form-input" placeholder="Email" disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Mật khẩu hiện tại</label>
+                            <input type="password" id="currentPassword" class="form-input" placeholder="Nhập mật khẩu hiện tại">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Mật khẩu mới</label>
+                            <input type="password" id="newPassword" class="form-input" placeholder="Nhập mật khẩu mới">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Xác nhận mật khẩu mới</label>
+                            <input type="password" id="confirmPassword" class="form-input" placeholder="Xác nhận mật khẩu mới">
+                        </div>
+
+                        <button class="btn-primary">Lưu thay đổi</button>
+                    </div>
+                </section>
+
+                <section id="uploads-tab" class="tab-content">
+                    <div class="tab-header">
+                        <h1>Ứng dụng của tôi</h1>
+                        <a href="../../pages/upload/upload.html" class="btn-upload-new">+ Tải lên ứng dụng mới</a>
+                    </div>
+
+                    <div class="uploads-grid">
+                    </div>
+
+                    <div class="empty-state" style="display: none;">
+                        <div class="empty-icon">📱</div>
+                        <p>Bạn chưa tải lên ứng dụng nào</p>
+                        <a href="../../pages/upload/upload.html" class="btn-link">Tải lên ứng dụng đầu tiên</a>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <div id="editPanel" class="edit-panel">
+        <div class="edit-panel-body">
+            <div class="edit-panel-header">
+                <div>
+                    <h2>Chỉnh sửa ứng dụng</h2>
+                </div>
+                <button class="close-panel" onclick="closeEditPanel()">&times;</button>
+            </div>
+
+            <div class="edit-form">
+                <div class="form-group">
+                    <label>Logo ứng dụng</label>
+                    <div class="logo-preview-box" id="editLogoBox">
+                        <img id="editLogoPreview" alt="Logo">
+                        <span id="editPlusIcon" class="plus-icon">+</span>
+                    </div>
+                    <input type="file" id="editLogoInput" accept="image/*" style="display: none;">
+                </div>
+
+                <div class="form-group">
+                    <label>Tên ứng dụng</label>
+                    <input type="text" id="editAppName" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label>Danh mục</label>
+                    <select id="editCategory" class="form-input">
+                        <option value="Công cụ">Công cụ</option>
+                        <option value="Giải trí">Giải trí</option>
+                        <option value="Trò chơi">Trò chơi</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Ảnh minh họa</label>
+                    <div id="editPreviewBox" class="preview-box">
+                        <div id="editPreviewList" class="preview-list"></div>
+                        <div class="preview-placeholder" id="editPlaceholder">
+                            <span>Nhấn để thêm ảnh</span>
+                        </div>
+                    </div>
+                    <input type="file" id="editPreviewInput" accept="image/*" multiple style="display: none;">
+                </div>
+
+                <div class="form-group">
+                    <label>Mô tả</label>
+                    <textarea id="editDescription" class="form-textarea" placeholder="Mô tả ứng dụng"></textarea>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="btn-cancel" onclick="closeEditPanel()">Hủy</button>
+                    <button class="btn-primary" id="saveEditBtn">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="panelOverlay" class="panel-overlay" onclick="closeEditPanel()"></div>
+
+    <footer></footer>
+
+    <script src="../../share/js/header.js"></script>
+    <script src="../../share/js/footer.js"></script>
+    <script src="user.js"></script>
+</body>
+
+</html>

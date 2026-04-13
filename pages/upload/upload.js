@@ -136,24 +136,14 @@ document.getElementById("uploadForm").addEventListener("submit", function (e) {
         alert("Vui lòng chọn file APK!");
         return;
     }
-    alert("Upload thành công demo");
-});
-document.getElementById("uploadForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    if (previewFiles.length === 0) {
-        alert("Vui lòng thêm ít nhất 1 ảnh minh hoạ!");
-        return;
-    }
-    if (!fileInput.files.length) {
-        alert("Vui lòng chọn file APK!");
-        return;
-    }
+    const loggedInUser = JSON.parse(localStorage.getItem("user")) || {};
     const newProject = {
         id: Date.now(),
         appName: document.getElementById('appName').value,
         category: document.getElementById('category').value,
         description: document.getElementById('description').value,
-        author: JSON.parse(localStorage.getItem("user"))?.name || "Sinh viên IUH",
+        author: loggedInUser.name || loggedInUser.email || "Người dùng",
+        authorEmail: loggedInUser.email,
         logo: logoPreview.src,
         previews: [],
         fileName: fileInput.files[0].name,

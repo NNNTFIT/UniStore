@@ -5,7 +5,7 @@ function saveUsers(users) {
     localStorage.setItem("users", JSON.stringify(users));
 }
 
-function register(email, password) {
+function register(name, email, password) {
     const users = getUsers();
 
     const userExists = users.find(user => user.email === email);
@@ -14,7 +14,7 @@ function register(email, password) {
         return false;
     }
 
-    users.push({ email, password });
+    users.push({ name, email, password });
     saveUsers(users);
 
     alert("Đăng ký thành công!");
@@ -29,8 +29,9 @@ function login(email, password) {
 
     if (user) {
         const loggedInUser = {
+            name: user.name || user.email,
             email: user.email,
-            avatar: `https://ui-avatars.com/api/?name=${user.email}&background=1570EF&color=fff`
+            avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name || user.email)}&background=1570EF&color=fff`
         };
 
         localStorage.setItem("user", JSON.stringify(loggedInUser));

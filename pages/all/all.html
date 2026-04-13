@@ -115,11 +115,39 @@
 <script src="../../share/js/header.js"></script>
 <script src="../../share/js/footer.js"></script>
 <script>
-    document.querySelectorAll(".detail").forEach(button => {
-        button.addEventListener("click", function () {
-            window.location.href = "../detail/detail.html";
+    function getDisplayAuthor(author) {
+        if (typeof author !== 'string') return author;
+        if (!author.includes('@')) return author;
+
+        const users = JSON.parse(localStorage.getItem("users") || "[]");
+        const user = users.find(u => u.email === author);
+        return user?.name || author;
+    }
+
+    function renderAllProjects() {
+        const projects = JSON.parse(localStorage.getItem("projects") || "[]");
+        const grid = document.querySelector(".app-grid");
+        const count = document.querySelector(".result-count");
+        
+        count.textContent = `${projects.length} kết quả`;
+        grid.innerHTML = "";
+        
+        projects.forEach(project => {
+            const authorLabel = getDisplayAuthor(project.author);
+            const item = document.createElement("a");
+            item.href = `../detail/detail.html?id=${project.id}`;
+            item.className = "carousel-item";
+            item.innerHTML = `
+                <img src="${project.logo}" alt="" class="carousel-item-logo">
+                <div class="carousel-item-title">${project.appName}</div>
+                <div class="carousel-item-cre">${authorLabel}</div>
+                <button class="carousel-item-btn" type="button">Chi tiết</button>
+            `;
+            grid.appendChild(item);
         });
-    });
+    }
+    document.addEventListener("DOMContentLoaded", renderAllProjects);
+    
     const dropdown = document.querySelector(".sort-dropdown");
     const selected = document.querySelector(".sort-selected");
     const options = document.querySelectorAll(".sort-options li");

@@ -8,8 +8,9 @@ function renderHeader() {
             ${uploadBtn}
             <div class="user-profile">
                 <img src="${loggedInUser.avatar}" class="user-avatar" onclick="toggleDropdown()">
+                <span class="user-name">${loggedInUser.name || loggedInUser.email}</span>
                 <div id="user-dropdown" class="dropdown-content">
-                    <a href="#">Tài khoản</a>
+                    <a href="../../pages/user/user.html">Tài khoản</a>
                     <a href="#" onclick="handleLogout()">Đăng xuất</a>
                 </div>
             </div>`;

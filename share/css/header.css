@@ -116,6 +116,7 @@ header{
     position: relative;
     display: flex;
     align-items: center;
+    gap: 8px;
 }
 
 .user-avatar {
@@ -126,6 +127,16 @@ header{
     object-fit: cover;
     transition: all 0.3s ease;
     background: #f0f0f0;
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--main-color-title);
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .user-avatar:hover {
