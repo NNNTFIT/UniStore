@@ -1,3 +1,26 @@
+
+const sampleProject = {
+    id: 1,
+    appName: "Canva",
+    category: "Công cụ",
+    description: "Canva là ứng dụng thiết kế đồ họa trực tuyến phổ biến, cho phép người dùng tạo ra các sản phẩm như poster, bài đăng mạng xã hội, slide thuyết trình hay video một cách dễ dàng. Với kho template phong phú, hình ảnh, icon và font chữ đa dạng, Canva giúp người dùng nhanh chóng tạo ra thiết kế đẹp mắt mà không cần nhiều kỹ năng chuyên môn. Ngoài ra, ứng dụng còn hỗ trợ chỉnh sửa ảnh, làm video, cộng tác nhóm và lưu trữ trên nền tảng đám mây, giúp quá trình làm việc trở nên linh hoạt và hiệu quả hơn.",
+    author: "hẹ hẹ",
+    authorEmail: "tn6421278@gmail.com",
+    logo: "../../img/canva/image.png",
+    previews: [
+        "../../img/canva/unnamed (1).webp",
+        "unnamed.webp"
+    ],
+    fileName: "sample.apk",
+    uploadDate: new Date().toLocaleDateString('vi-VN')
+};
+
+let projects = JSON.parse(localStorage.getItem("projects") || "[]");
+if (!projects.some(p => p.id === sampleProject.id)) {
+    projects.push(sampleProject);
+    localStorage.setItem("projects", JSON.stringify(projects));
+}
+
 const logoInput = document.getElementById('logoInput');
 const logoPreview = document.getElementById('logoPreview');
 const plusIcon = document.getElementById('plusIcon');
