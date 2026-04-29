@@ -259,3 +259,98 @@ body {
 .btn-submit:active {
     transform: scale(0.96);
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px;
+    }
+    .upload-container {
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+    .upload-card {
+        padding: 20px;
+    }
+    .form-label,
+    .form-group-text {
+        font-size: 16px;
+    }
+    .form-input,
+    .form-textarea,
+    .select-selected {
+        padding: 10px;
+    }
+    .logo-upload-wrapper {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .logo-preview-box {
+        width: 80px;
+        height: 80px;
+    }
+    .preview-upload-box {
+        height: 150px;
+    }
+    .drop-zone {
+        padding: 20px;
+    }
+    .preview-list {
+        gap: 8px;
+    }
+    .preview-item {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+    .upload-container {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+    .upload-card {
+        padding: 15px;
+    }
+    .header-section {
+        margin-bottom: 20px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-label,
+    .form-group-text {
+        font-size: 14px;
+    }
+    .form-input,
+    .form-textarea,
+    .select-selected {
+        padding: 8px;
+        font-size: 14px;
+    }
+    .logo-preview-box {
+        width: 70px;
+        height: 70px;
+    }
+    .preview-upload-box {
+        height: 120px;
+    }
+    .drop-zone {
+        padding: 15px;
+    }
+    .preview-list {
+        gap: 6px;
+        justify-content: center;
+    }
+    .preview-item {
+        width: 90px;
+        height: 90px;
+    }
+    .btn-submit {
+        padding: 12px;
+        font-size: 13px;
+    }
+}

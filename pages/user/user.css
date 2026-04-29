@@ -165,7 +165,6 @@ body.modal-open {
     display: block;
 }
 
-/* Profile Form */
 .profile-form {
     max-width: 500px;
 }
@@ -227,7 +226,6 @@ body.modal-open {
     box-shadow: 0 4px 12px rgba(24, 87, 238, 0.3);
 }
 
-/* Uploads Grid */
 .uploads-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -306,7 +304,6 @@ body.modal-open {
     background-color: #fef2f2;
 }
 
-/* Empty State */
 .empty-state {
     text-align: center;
     padding: 60px 20px;
@@ -339,7 +336,6 @@ body.modal-open {
     transform: translateY(-2px);
 }
 
-/* Edit panel */
 .panel-overlay {
     display: none;
     position: fixed;
@@ -461,7 +457,6 @@ body.modal-open {
     }
 }
 
-/* Logo and Preview Styles in Modal */
 .logo-preview-box {
     width: 90px;
     height: 90px;
@@ -557,7 +552,6 @@ body.modal-open {
     font-weight: 500;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .user-wrapper {
         grid-template-columns: 1fr;

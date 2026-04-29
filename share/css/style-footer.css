@@ -131,9 +131,26 @@ footer{
     color: var(--primary);
 }
 
+@media (max-width: 1024px) {
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    .footer-top-left {
+        max-width: none;
+    }
+}
+
 @media(max-width: 767px){
     .footer-top{
-        gap: 8px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .footer-top-left{
+        gap: 20px;
+    }
+    .footer-top-left-text{
+        font-size: 13px;
     }
     .footer-top img{
         width: 108px;
@@ -145,6 +162,10 @@ footer{
     .footer-bottom{
         flex-direction: column;
         gap: 12px;
+    }
+    .footer-bottom-content-right{
+        flex-direction: column;
+        gap: 8px;
     }
     .footer-bottom a{
         font-size: 10px;

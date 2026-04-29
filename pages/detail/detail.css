@@ -471,6 +471,155 @@ transform:scale(1.02);
     font-size: 12px;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .detail-container {
+        padding: 30px 15px 80px;
+    }
+    .app-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .app-logo {
+        width: 100px;
+        height: 100px;
+    }
+    .app-info h1 {
+        font-size: 24px;
+        text-align: left;
+    }
+    .app-author {
+        text-align: left;
+    }
+    .action-row {
+        justify-content: flex-start;
+    }
+    .stats-bar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        border: none;
+        padding: 16px 0;
+        text-align: center;
+    }
+    .stat-item {
+        border: none;
+        padding: 12px;
+        background: #f9fafb;
+        border-radius: 8px;
+    }
+    .stat-item:last-child {
+        border: none;
+    }
+    .section-detail-bottom {
+        padding: 20px;
+    }
+    .section-detail-bottom-gird {
+        grid-template-columns: 1fr;
+    }
+    .screenshots {
+        gap: 12px;
+    }
+    .screen-img {
+        min-width: 200px;
+        height: 360px;
+    }
+    .review-section h3 {
+        font-size: 36px;
+    }
+    .rating-score-letter {
+        font-size: 48px;
+    }
+    .rating-score-p {
+        font-size: 14px;
+    }
+    .comment-box {
+        padding: 30px 15px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-container {
+        padding: 20px 10px 60px;
+    }
+    .app-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .app-logo {
+        width: 80px;
+        height: 80px;
+    }
+    .app-info h1 {
+        font-size: 20px;
+        text-align: left;
+    }
+    .app-author {
+        text-align: left;
+    }
+    .action-row {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .btn-download {
+        flex: 1;
+        min-width: 120px;
+    }
+    .stats-bar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        border: none;
+        padding: 12px 0;
+    }
+    .stat-item {
+        border: none;
+        padding: 10px 8px;
+        background: #f9fafb;
+        border-radius: 8px;
+    }
+    .stat-value {
+        font-size: 16px;
+    }
+    .stat-item div:last-child {
+        font-size: 11px;
+    }
+    .section-detail-bottom {
+        padding: 15px;
+    }
+    .section-detail-bottom-gird {
+        gap: 16px;
+    }
+    .screenshots {
+        gap: 8px;
+    }
+    .screen-img {
+        min-width: 150px;
+        height: 280px;
+    }
+    .review-section h3 {
+        font-size: 28px;
+    }
+    .rating-score-letter {
+        font-size: 36px;
+    }
+    .rating-score-p {
+        font-size: 12px;
+    }
+    .comment-box {
+        padding: 20px 10px 10px;
+    }
+    .comment-header {
+        gap: 12px;
+    }
+    .user-avatar {
+        width: 32px;
+        height: 32px;
+    }
+}
+
 .reply-name {
     font-weight: 600;
 }

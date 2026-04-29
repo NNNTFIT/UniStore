@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - UniStore</title>
+    <link rel="stylesheet" href="../../share/css/main.css">
+    <link rel="stylesheet" href="../../share/css/header.css">
+    <link rel="stylesheet" href="../../share/css/style-footer.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header></header>
+
+    <main class="admin-main">
+        <div class="admin-container">
+            <h1 class="admin-title">Quản lý sản phẩm</h1>
+
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="total-products">3</div>
+                    <div class="stat-label">Tổng sản phẩm</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="pending-products">2</div>
+                    <div class="stat-label">Chờ duyệt</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="approved-products">1</div>
+                    <div class="stat-label">Đã duyệt</div>
+                </div>
+            </div>
+
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="pending">Chờ duyệt</button>
+                <button class="tab-btn" data-tab="approved">Đã duyệt</button>
+            </div>
+
+            <div id="pending-tab" class="tab-content active">
+                <div class="product-list" id="pending-list">
+                    <div class="product-item">
+                        <img src="../../share/img/app.jpg" alt="" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Duolingo</div>
+                            <div class="product-author">Tác giả: Duolingo, Inc</div>
+                            <div class="product-status status-pending">Chờ duyệt</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-approve">Duyệt</button>
+                            <button class="btn-reject">Từ chối</button>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <img src="../../share/img/app.jpg" alt="" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Spotify</div>
+                            <div class="product-author">Tác giả: Spotify AB</div>
+                            <div class="product-status status-pending">Chờ duyệt</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-approve">Duyệt</button>
+                            <button class="btn-reject">Từ chối</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="approved-tab" class="tab-content">
+                <div class="product-list" id="approved-list">
+                    <div class="product-item">
+                        <img src="../../share/img/app.jpg" alt="" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Instagram</div>
+                            <div class="product-author">Tác giả: Meta Platforms</div>
+                            <div class="product-status status-approved">Đã duyệt</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-reject">Từ chối</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="../../share/js/header.js"></script>
+    <script src="../../share/js/footer.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            renderHeader();
+            
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const tabName = this.getAttribute('data-tab');
+                    
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    document.getElementById(tabName + '-tab').classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

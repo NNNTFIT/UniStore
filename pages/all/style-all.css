@@ -149,3 +149,66 @@ body{
     flex-wrap:wrap;
     gap:24px;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .page-title h1 {
+        font-size: 24px;
+    }
+    .sort-dropdown {
+        width: 200px;
+    }
+    .app-section {
+        padding: 30px 15px 60px;
+    }
+    .app-section-title {
+        font-size: 24px;
+    }
+    .app-grid {
+        gap: 16px;
+    }
+    .pagination {
+        gap: 8px;
+        margin-top: 30px;
+    }
+    .page-btn {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header {
+        gap: 16px;
+    }
+    .page-title h1 {
+        font-size: 20px;
+    }
+    .sort-dropdown {
+        width: 100%;
+    }
+    .app-section {
+        padding: 20px 10px 40px;
+    }
+    .app-section-title {
+        font-size: 20px;
+    }
+    .app-grid {
+        gap: 12px;
+        justify-content: center;
+    }
+    .pagination {
+        gap: 6px;
+        margin-top: 20px;
+    }
+    .page-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+}

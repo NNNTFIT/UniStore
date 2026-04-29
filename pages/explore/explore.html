@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../../share/css/style-footer.css">
     <link rel="stylesheet" href="../../share/css/section-app.css">
     <link rel="stylesheet" href="explore.css">
-    <link rel="stylesheet" href="">
     <title>UniStore - Khám phá</title>
 </head>
 <body>
@@ -35,6 +34,10 @@
                 <a class="section-select-all" href="../all/all.html">Xem tất cả</a>
             </div>
             <div class="carousel">
+                <div class="carousel-controls">
+                    <button class="carousel-button carousel-prev" type="button" aria-label="Previous">‹</button>
+                    <button class="carousel-button carousel-next" type="button" aria-label="Next">›</button>
+                </div>
                 <div class="carousel-container">
                     <a href="../detail/detail.html" class="carousel-item">
                         <img src="../../share/img/app.jpg" alt="" class="carousel-item-logo">
@@ -80,6 +83,10 @@
             </div>
             
             <div class="carousel">
+                <div class="carousel-controls">
+                    <button class="carousel-button carousel-prev" type="button" aria-label="Previous">‹</button>
+                    <button class="carousel-button carousel-next" type="button" aria-label="Next">›</button>
+                </div>
                 <div class="carousel-container">
                     <a href="../detail/detail.html" class="carousel-item">
                         <img src="../../share/img/app.jpg" alt="" class="carousel-item-logo">
@@ -134,7 +141,6 @@
             const updateContainer = document.querySelector(".update .carousel-container");
             const trendContainer = document.querySelector(".trend .carousel-container");
             
-            // Clear existing items
             updateContainer.innerHTML = "";
             trendContainer.innerHTML = "";
             
@@ -152,7 +158,11 @@
                 trendContainer.appendChild(item);
             });
         }
-        document.addEventListener("DOMContentLoaded", renderExploreProjects);
+        document.addEventListener("DOMContentLoaded", function() {
+            renderHeader();
+            renderExploreProjects();
+        });
     </script>
+    <script src="../../share/js/carousel.js"></script>
 </body>
 </html>
