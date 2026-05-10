@@ -76,8 +76,6 @@
     gap: 32px;
     flex-direction: column;
 }
-
-/* Responsive Design */
 @media (max-width: 768px) {
     .hero {
         padding: 60px 0;
