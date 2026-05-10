@@ -9,144 +9,208 @@
     --border-item: #e2e8f0;
     --button-item: #eff6ff;
 }
+
 .filter{
-    padding: 40px 0;
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 40px 0 20px;
 }
+
 .filter-container{
-    width: 90%;
+    width: 92%;
     max-width: 1280px;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
+
 .filter-title{
-    position: relative;
     font-family: var(--main-font);
-    font-weight: 700;
+    font-size: 32px;
+    font-weight: 800;
     color: var(--main-color-title);
-    font-size: 28px;
 }
-/* .filter-title::after{
-    position: absolute;
-    left: 0;
-    content: " ";
-    width: 3px;
-    height: 100%;
-    background-color: var(--primary);
-} */
+
 .filter-carousel{
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
 }
+
+.filter-carousel::-webkit-scrollbar{
+    display: none;
+}
+
 .filter-carousel-container{
     display: flex;
-    gap: 12px;
     align-items: center;
+    gap: 12px;
+    min-width: max-content;
+    padding-bottom: 4px;
 }
+
 .filter-carousel-select{
     cursor: pointer;
-    font-family: var(--main-font);
-    padding: 10px 24px;
-    background-color: white;
+    padding: 10px 22px;
+    border-radius: 100px;
+    border: 1px solid var(--border-item);
+    background: white;
+    color: var(--main-color-text);
     font-size: 14px;
     font-weight: 500;
-    transition: all 0.2s ease;
-    border: 1px solid var(--border-item);
-    border-radius: 100px;
-    color: var(--main-color-text);
+    font-family: var(--main-font);
+    white-space: nowrap;
+    transition: all .2s ease;
 }
-.filter-carousel-select.filter-select-active{
-    color: white;
-    background-color: var(--primary);
-    border: 0;
-}
-.filter-carousel-select:not(.filter-select-active):hover{
-    border: 1px solid var(--primary);
+
+.filter-carousel-select:hover{
+    border-color: var(--primary);
     color: var(--primary);
 }
-.update{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 32px 0;
+
+.filter-carousel-select.filter-select-active{
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
 }
-.update-container{
-    width: 90%;
-    max-width: 1280px;
-    display: flex;
-    gap: 32px;
-    flex-direction: column;
-}
+
+.update,
 .trend{
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 32px 0 64px 0;
 }
+
+.update{
+    padding: 28px 0;
+}
+
+.trend{
+    padding: 28px 0 70px;
+}
+
+.update-container,
 .trend-container{
-    width: 90%;
+    width: 92%;
     max-width: 1280px;
     display: flex;
-    gap: 32px;
     flex-direction: column;
+    gap: 28px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .filter {
-        padding: 30px 0;
+.section-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.section-title{
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--main-color-title);
+    font-family: var(--main-font);
+}
+
+.section-select-all{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    font-family: var(--main-font);
+}
+
+@media (max-width: 768px){
+
+    .filter{
+        padding: 28px 0 16px;
     }
-    .filter-container {
-        gap: 20px;
+
+    .filter-container{
+        gap: 18px;
     }
-    .filter-title {
-        font-size: 24px;
+
+    .filter-title{
+        font-size: 26px;
     }
-    .filter-carousel-select {
-        padding: 8px 20px;
+
+    .filter-carousel-container{
+        gap: 10px;
+    }
+
+    .filter-carousel-select{
+        padding: 9px 18px;
         font-size: 13px;
     }
-    .update {
-        padding: 24px 0;
+
+    .update,
+    .trend{
+        padding-top: 22px;
     }
-    .update-container {
-        gap: 24px;
+
+    .trend{
+        padding-bottom: 50px;
     }
-    .trend {
-        padding: 24px 0;
+
+    .update-container,
+    .trend-container{
+        gap: 22px;
     }
-    .trend-container {
-        gap: 24px;
+
+    .section-title{
+        font-size: 22px;
     }
 }
 
-@media (max-width: 480px) {
-    .filter {
-        padding: 20px 0;
+@media (max-width: 480px){
+
+    .filter{
+        padding: 22px 0 10px;
     }
-    .filter-container {
-        gap: 16px;
+
+    .filter-container{
+        width: 94%;
+        gap: 14px;
     }
-    .filter-title {
-        font-size: 20px;
+
+    .filter-title{
+        font-size: 22px;
+        line-height: 1.3;
     }
-    .filter-carousel-select {
-        padding: 6px 16px;
+
+    .filter-carousel-select{
+        padding: 8px 16px;
         font-size: 12px;
     }
-    .update {
-        padding: 16px 0;
+
+    .update,
+    .trend{
+        padding-top: 18px;
     }
-    .update-container {
-        gap: 16px;
+
+    .trend{
+        padding-bottom: 40px;
     }
-    .trend {
-        padding: 16px 0;
+
+    .update-container,
+    .trend-container{
+        width: 94%;
+        gap: 18px;
     }
-    .trend-container {
-        gap: 16px;
+
+    .section-top{
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .section-title{
+        font-size: 20px;
+    }
+
+    .section-select-all{
+        font-size: 13px;
     }
 }

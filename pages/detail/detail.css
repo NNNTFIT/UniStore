@@ -470,188 +470,278 @@ transform:scale(1.02);
     justify-content: space-between;
     font-size: 12px;
 }
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+@media (max-width: 768px){
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .detail-container {
-        padding: 30px 15px 80px;
+    .detail-container{
+        padding: 30px 16px 80px;
     }
-    .app-hero {
+
+    /* APP HERO */
+    .app-hero{
         flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+        align-items: center;
+        text-align: center;
+        gap: 18px;
     }
-    .app-logo {
+
+    .app-logo{
         width: 100px;
         height: 100px;
+        border-radius: 22px;
     }
-    .app-info h1 {
+
+    .app-info{
+        width: 100%;
+    }
+
+    .app-info h1{
         font-size: 24px;
-        text-align: left;
     }
-    .app-author {
-        text-align: left;
-    }
-    .action-row {
-        justify-content: flex-start;
-    }
-    .stats-bar {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-        border: none;
-        padding: 16px 0;
-        text-align: center;
-    }
-    .stat-item {
-        border: none;
-        padding: 12px;
-        background: #f9fafb;
-        border-radius: 8px;
-    }
-    .stat-item:last-child {
-        border: none;
-    }
-    .section-detail-bottom {
-        padding: 20px;
-    }
-    .section-detail-bottom-gird {
-        grid-template-columns: 1fr;
-    }
-    .screenshots {
-        gap: 12px;
-    }
-    .screen-img {
-        min-width: 200px;
-        height: 360px;
-    }
-    .review-section h3 {
-        font-size: 36px;
-    }
-    .rating-score-letter {
-        font-size: 48px;
-    }
-    .rating-score-p {
+
+    .app-author{
         font-size: 14px;
     }
-    .comment-box {
-        padding: 30px 15px 15px;
+
+    .action-row{
+        justify-content: center;
+    }
+
+    .btn-download{
+        width: 100%;
+        max-width: 250px;
+    }
+
+    /* STATS */
+    .stats-bar{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 12px;
+        border: none;
+        padding: 0;
+    }
+
+    .stat-item{
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 16px 10px;
+        background: white;
+    }
+
+    .stat-value{
+        font-size: 17px;
+    }
+
+    /* SCREENSHOT */
+    .screenshots{
+        gap: 12px;
+    }
+
+    .screen-img{
+        min-width: 220px;
+        height: 400px;
+    }
+
+    /* DETAIL INFO */
+    .section-detail-bottom{
+        padding: 20px;
+    }
+
+    .section-detail-bottom-gird{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* REVIEW */
+    .review-item{
+        flex-direction: column;
+    }
+
+    .review-avatar{
+        width: 36px;
+        height: 36px;
+    }
+
+    .review-avatar img{
+        width: 36px;
+        height: 36px;
+    }
+
+    .review-body{
+        width: 100%;
+    }
+
+    .comment-input{
+        height: 110px;
+        padding: 14px;
+        padding-bottom: 60px;
+    }
+
+    .btn-submit{
+        top: auto;
+        bottom: 12px;
+        transform: none;
     }
 }
 
-@media (max-width: 480px) {
-    .detail-container {
-        padding: 20px 10px 60px;
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+@media (max-width: 480px){
+
+    .detail-container{
+        padding: 20px 12px 60px;
     }
-    .app-hero {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-    }
-    .app-logo {
-        width: 80px;
-        height: 80px;
-    }
-    .app-info h1 {
+
+    .section-title{
         font-size: 20px;
-        text-align: left;
     }
-    .app-author {
-        text-align: left;
+
+    /* HERO */
+    .app-logo{
+        width: 85px;
+        height: 85px;
+        border-radius: 18px;
     }
-    .action-row {
-        flex-wrap: wrap;
-        gap: 12px;
+
+    .app-info h1{
+        font-size: 22px;
     }
-    .btn-download {
-        flex: 1;
-        min-width: 120px;
+
+    .app-author{
+        font-size: 13px;
     }
-    .stats-bar {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+
+    .btn-download{
+        width: 100%;
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    /* STATS */
+    .stats-bar{
+        grid-template-columns: 1fr 1fr;
         gap: 10px;
-        border: none;
-        padding: 12px 0;
     }
-    .stat-item {
-        border: none;
-        padding: 10px 8px;
-        background: #f9fafb;
-        border-radius: 8px;
+
+    .stat-item{
+        padding: 14px 8px;
     }
-    .stat-value {
-        font-size: 16px;
+
+    .stat-value{
+        font-size: 15px;
+        flex-wrap: wrap;
     }
-    .stat-item div:last-child {
+
+    .stat-item div:last-child{
         font-size: 11px;
     }
-    .section-detail-bottom {
-        padding: 15px;
+
+    /* SCREENSHOT */
+    .screen-img{
+        min-width: 170px;
+        height: 300px;
+        border-radius: 12px;
     }
-    .section-detail-bottom-gird {
-        gap: 16px;
+
+    /* DESCRIPTION */
+    .short-desc{
+        font-size: 14px;
+        line-height: 1.7;
     }
-    .screenshots {
-        gap: 8px;
+
+    .short-desc ul{
+        padding-left: 18px;
     }
-    .screen-img {
-        min-width: 150px;
-        height: 280px;
+
+    /* DETAIL BOX */
+    .section-detail-bottom{
+        padding: 16px;
+        border-radius: 16px;
     }
-    .review-section h3 {
-        font-size: 28px;
+
+    .section-detail-bottom-gird-item{
+        align-items: flex-start;
     }
-    .rating-score-letter {
-        font-size: 36px;
+
+    .section-detail-bottom-gird-item-content-text{
+        font-size: 13px;
+        word-break: break-word;
     }
-    .rating-score-p {
-        font-size: 12px;
+
+    /* REVIEW */
+    .review-section{
+        padding-top: 30px;
     }
-    .comment-box {
-        padding: 20px 10px 10px;
+
+    .rating-score-letter{
+        font-size: 42px;
     }
-    .comment-header {
+
+    .rating-score-p{
+        font-size: 13px;
+    }
+
+    .comment-box{
+        padding: 20px 0 0;
+    }
+
+    .comment-stars{
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .rating-text{
+        margin-left: 0;
+    }
+
+    .comment-input{
+        font-size: 13px;
+    }
+
+    .btn-submit{
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    .review-body{
+        padding: 14px;
+    }
+
+    .review-name{
+        font-size: 14px;
+    }
+
+    .review-time{
+        font-size: 11px;
+    }
+
+    .review-text{
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .review-actions{
         gap: 12px;
     }
-    .user-avatar {
-        width: 32px;
-        height: 32px;
+
+    .reply-box{
+        flex-direction: column;
+        margin-left: 0;
     }
-}
 
-.reply-name {
-    font-weight: 600;
-}
+    .reply-input{
+        width: 100%;
+    }
 
-.reply-time {
-    font-size: 11px;
-    color: #6b7280;
-}
+    .reply-submit{
+        width: 100%;
+        padding: 10px;
+    }
 
-.reply-text {
-    font-size: 13px;
-}
-
-.reply-box {
-    display: flex;
-    gap: 10px;
-    margin-left: 25px;
-    margin-top: 10px;
-}
-
-.reply-input {
-    flex: 1;
-    padding: 8px 12px;
-    border: 1px solid #e5e7eb;
-    border-radius: 20px;
-}
-
-.reply-submit {
-    background: #0f172a;
-    color: white;
-    border: none;
-    padding: 6px 14px;
-    border-radius: 20px;
-    cursor: pointer;
+    .reply-list{
+        margin-left: 0;
+    }
 }
